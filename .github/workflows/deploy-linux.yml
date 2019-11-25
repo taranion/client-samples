@@ -19,6 +19,6 @@ jobs:
           ${{ runner.os }}-maven-    
     - name: Build distribution
       env:
-        GRAALVM_HOME: $GITHUB_WORKSPACE/graalvm
+        GRAALVM_HOME: ${GITHUB_WORKSPACE}/graalvm
         JAVA_HOME: /home/runner/work/client-samples/client-samples/graalvm
       run: set; $GRAALVM_HOME/bin/gu install native-image ; cd Maven/HelloWorld ; mvn clean client:build ; ls target
