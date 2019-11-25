@@ -8,9 +8,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Set up GraalVM 19.3.0 / Java 11
-      uses: DeLaGuardo/setup-graalvm@2.0
+      uses: rtc11/setup-graalvm@master
       with:
-        graalvm-version: '19.3.0.java11'
+        args: https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-19.3.0/graalvm-ce-java11-linux-amd64-19.3.0.tar.gz
     - uses: actions/cache@v1
       with:
         path: ~/.m2/repository
