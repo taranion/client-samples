@@ -18,4 +18,4 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-maven-    
     - name: Build distribution
-      run: cd Maven/HelloWorkd ; ./gradlew nativeBuild ; ls build
+      run: cd Maven/HelloWorld ; ./gradlew nativeBuild ; ls build
